@@ -15,7 +15,7 @@ class ShowUserProfileUseCase {
       throw new Error("User not found");
     }
 
-    return user
+    return user;
   }
 }
 

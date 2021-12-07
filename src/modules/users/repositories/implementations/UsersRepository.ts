@@ -23,7 +23,6 @@ class UsersRepository implements IUsersRepository {
 
     Object.assign(user, {
       name,
-      admin: false,
       email,
       created_at: new Date(),
       updated_at: new Date()
@@ -31,7 +30,7 @@ class UsersRepository implements IUsersRepository {
 
     this.users.push(user);
 
-    return user
+    return user;
   }
 
   findById(id: string): User | undefined {
@@ -50,7 +49,7 @@ class UsersRepository implements IUsersRepository {
     user.admin = true;
     user.updated_at = new Date();
 
-    return user
+    return user;
   }
 
   list(): User[] {
